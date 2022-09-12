@@ -1,7 +1,6 @@
 package com.example.calculator.serviceCalculator;
 
 public interface ServiceCalc {
-
     int getRequestPlus(int a, int b);
 
     int getRequestMinus(int a, int b);

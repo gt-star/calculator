@@ -36,10 +36,6 @@ public class Controller {
     @GetMapping("/divide")
     public int sumDivide(@RequestParam(required = true) int num1,
                         @RequestParam(required = true) int num2){
-        if (num1 == 0 || num2 == 0) {
-            System.out.println("division by zero");
-            return 0;
-        }
         return serviceCalc.getRequestDivide(num1,num2);
     }
 

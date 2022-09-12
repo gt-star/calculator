@@ -1,5 +1,6 @@
 package com.example.calculator.serviceCalculator;
 
+import com.example.calculator.Exception.DivisionByZeroException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,7 +25,9 @@ public class ServiceCalcImpl implements ServiceCalc{
 
     @Override
     public int getRequestDivide(int a, int b) {
-
+        if (b == 0) {
+            throw new DivisionByZeroException();
+        }
         return a/b;
     }
 }
